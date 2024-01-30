@@ -1,0 +1,100 @@
+body{
+    height: 100vh;
+    font-family: "PT Sans" ,Arial, Helvetica, sans-serif;
+}
+
+.gameArea{
+    width: 40%;
+    height: 400px;
+    margin: 0 auto;
+    border: 3px solid black;
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-width: 0;
+}
+.gameCell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 2rem;
+}
+
+.gameCell:hover{
+    border: 2.5px solid red;
+}
+
+.wrapperPlayer{
+    height: 30%;
+    position: relative;
+}
+
+.playerInfo{
+    display: none;
+    justify-content: space-around;
+    height: 100%;
+    align-items: flex-end;
+    font-size: 1.45rem;
+}
+
+.formArea{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#playerForms{
+    width: 100%;
+}
+
+.playerForm > input[type='text'],
+.playerForm > select,
+.playerForm > select > option{
+    font-size: large;
+    border-radius: 8px;
+}
+
+.playerForm > label {
+    font-size: 1.15rem;
+}
+
+.formsInput{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 150px;
+}
+
+.playerForm *{
+    margin: 5px;
+}
+
+.sbmtDiv{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.submitButton {
+    background-color: darkgray;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 7em;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+   }
+
+.submitButton:active {
+    color: darkgray;
+    background-color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+}
+
+.submitButton:hover{
+    background-color: rgb(182, 182, 182);
+    color: rgb(117, 117, 117);
+}

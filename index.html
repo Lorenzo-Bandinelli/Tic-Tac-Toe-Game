@@ -3,9 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    tic tac toe game
+    <div class="gameArea">
+        <div class="gameCell testCell">a</div>
+        <div class="gameCell">b</div>
+        <div class="gameCell">c</div>
+        <div class="gameCell">d</div>
+        <div class="gameCell">e</div>
+        <div class="gameCell">f</div>
+        <div class="gameCell">g</div>
+        <div class="gameCell">h</div>
+        <div class="gameCell testCell2">i</div>
+    </div>
+
+    <div class="formArea">
+            <form id="playerForms">
+
+                <div class="formsInput">
+
+                    <div class="playerForm">
+                        <input type="text" id="player1Name" name="player1Name" placeholder="    Player 1 Name">
+                        
+                        <label for="selectValuePlayer1">player 1 Value</label>
+                        <select name="selectValuePlayer1" id="ValuePlayer1">
+                            <option value="X">X</option>
+                            <option value="O">O</option>
+                        </select>
+                    </div>
+
+                    <div class="playerForm">
+                        <input type="text" id="player2Name" name="player2Name" placeholder="    Player 2 Name">
+                    
+                        <label for="selectValuePlayer2">player 2 Value</label>
+                        <select name="selectValuePlayer2" id="ValuePlayer2">
+                            <option value="X">X</option>
+                            <option value="O">O</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="sbmtDiv">
+                    <input type="submit" value="submit" class="submitButton">
+                </div>
+
+                
+                
+            </form>
+    </div>
+
+    <div class="wrapperPlayer">
+            <div class="playerInfo">
+                <div class="player1div playerDiv">
+                    <span class="player1NameInfo">player 1 name:  </span><br>
+                    <span class="player1ValueInfo">Is:  </span><br>
+                    <span>Wins:  </span><span class="player1WinsInfo"></span>
+                </div>
+                <div class="player2div playerDiv">
+                    <span class="player2NameInfo">player 2 name:  </span><br>
+                    <span class="player2ValueInfo">Is:  </span><br>
+                    <span>Wins:  </span><span class="player2WinsInfo"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="game.js"></script>
 </body>
 </html>

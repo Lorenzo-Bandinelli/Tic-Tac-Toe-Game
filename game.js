@@ -151,21 +151,21 @@ function addInput(event){
         if (gameArea[positions.posY][positions.posX] != undefined){
             console.log('occupied')
             window.alert('occupied space')
+            return undefined
         }
 
+        gameboard.addingValue(positions.posY, positions.posX, playerTurn.playerValue)
+        console.log(gameboard.getArea());
+        
+        if (checWin(gameArea)){
+            win(playerTurn)
+            this.playerTurn = changeTurn(playerTurn)
+        }
+        
         else{
-            gameboard.addingValue(positions.posY, positions.posX, playerTurn.playerValue)
-            console.log(gameboard.getArea());
-            
-            if (checWin(gameArea)){
-                win(playerTurn)
-                this.playerTurn = changeTurn(playerTurn)
-            }
-            else{
-                render()
-                this.playerTurn = changeTurn(playerTurn)
-            }  
-        }   
+            render()
+            this.playerTurn = changeTurn(playerTurn)
+        }  
     }
 }
 
